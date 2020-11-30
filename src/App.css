@@ -1,22 +1,18 @@
  /* Extra small devices (portrait phones, less than 576px)
  No media query for `xs` since this is the default in Bootstrap */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@font-face{
+    font-family: 'fancy';
+    src: url('./Beyond\ Wonderland.ttf');
+}
 
 html {
     position: relative;
     min-height: 100%;
 }
 body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-}
-.footer {
-    color: white;
-    background-color: rgb(7, 123, 231) !important;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Set the fixed height of the footer here */
-    line-height: 60px; /* Vertically center the text there */
-    background-color: #f5f5f5;
+    margin-bottom: 60px;
+    font-family:'Roboto', sans-serif; ; /* Margin bottom by footer height */
 }
 
 .navbar-brand{
@@ -24,22 +20,71 @@ body {
     margin-right: auto;
 }
 
+.search{
+    border-radius: 0%;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.search-button{
+    margin: auto;
+}
+.btn{
+    margin: 1.2rem;
+}
+.card-title{
+    letter-spacing: 5px;
+    font-family: fancy;
+    font-size: 2rem;
+
+}
+
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-
+    .search{
+        border-radius: 0%;
+        margin-top: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .search-button{
+        margin-left: 3rem;
+    }
  }
 
  /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+    .search{
+        margin-left: 5% ;
+        margin-right: 5% ;
+    }
+    .search-button{
+        margin-left: 8rem;
+    }
 
  }
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+    .search{
+        margin-left: 10% ;
+        margin-right: 10% ;
+    } 
+    .search-button{
+        margin-left: 12rem;
+    }
 
  }
 
 /*  Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
+    .search{
+        margin-left: 20% ;
+        margin-right: 20% ;
+    } 
+    .search-button{
+        margin-left: 15rem;
+    }
 
  }

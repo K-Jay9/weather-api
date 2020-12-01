@@ -42,6 +42,16 @@ body {
 .list-group-item{
     border: none;
 }
+.grey{
+    background-color: rgba(179, 176, 176, 0.699) ! important;
+}
+.rounded{
+    opacity: 0.6;
+}
+span{
+    padding: 10px;
+}
+
 
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 

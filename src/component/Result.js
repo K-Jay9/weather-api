@@ -2,94 +2,58 @@ import React, { Component } from 'react'
 
 
 class Result extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          error: null,
-          isLoaded: false,
-          items: []
-        };
-      }
+
     
-    
-    componentDidMount(){
-        const base = process.env.REACT_APP_BASE_URL
-        const key = process.env.REACT_APP_API_KEY
-        const url = `${base}current?access_key=${key}&query= New York`
-        fetch(url)
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    console.log(result);
-                    this.setState({
-                        isLoaded : true,
-                        items : result.current,
-                        locate : result.location
-                    })
-                },
-                (error) => {
-                    this.setState({
-                      isLoaded: true,
-                      error
-                    })
-                }
-            )
-    }
+
     render() {
-        const { error, isLoaded, items , locate} = this.state;
-        if (error) {
-          return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-          return <div>
-              <span>Loading ...</span>
-          </div>;
-        } else {
+
+       
         return (
             <div className="container">
 
                 <div className="card result">
                     <div className="card-body grey">
                         <h5 className="card-title align-center">Current Weather</h5>
-                        <img src={items.weather_icons[0]} alt='weather icon' className='rounded'></img>
+                        <img  alt='weather icon' className='rounded'></img>
                     </div>
                         <span className='text-muted right'>
-                            Observation Time : {items.observation_time}</span>
+                            Observation Time : </span>
                         <span className='text-muted right'>
-                            Location: {locate.name}, {locate.country} </span>
+                            Location: </span>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">
-                            Description : {items.weather_descriptions[0]}
+                            Description : 
                         </li>
                         <li className="list-group-item">
-                            Temperature : {items.temperature} &#8451;
+                            Temperature : 
                         </li>
                         <li className="list-group-item">
-                            Cloudcover : {items.cloudcover} oktas
+                            Cloudcover :
                         </li>
                         <li className="list-group-item">
-                            Humidity : {items.humidity} g.m<sup>-3</sup>
+                            Humidity : 
                         </li>
                         <li className="list-group-item">
-                            Precipitation : {items.precip} mm
+                            Precipitation :
                         </li>
                         <li className="list-group-item">
-                            Visibility : {items.visibility} M
+                            Visibility :
                         </li>
                         <li className="list-group-item">
-                            Wind Degree : {items.wind_degree} <sup>&#9702; </sup> 
+                            Wind Degree : 
                         </li>
                         <li className="list-group-item">
-                            Wind Direction : {items.wind_dir}
+                            Wind Direction : 
                         </li>
                         <li className="list-group-item">
-                            Wind Speed : {items.wind_speed} Km/h
+                            Wind Speed :
                         </li>
                     </ul>
                 </div>
             </div>
         )
         }
-    }
+    
 }
 
 export default Result

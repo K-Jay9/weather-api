@@ -1,16 +1,14 @@
 import './App.css'
-import Result from './component/Result'
 import Search from './component/Search'
 
+import React from 'react'
 
 function App(){
 
     return (
         <div className="App">
-              <Search/>
-              <Result />
-
-            </div>
+              <Search />
+        </div>
     )
 }
 

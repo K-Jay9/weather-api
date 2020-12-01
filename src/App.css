@@ -25,11 +25,9 @@ body {
     margin-top: 20%;
     margin-left: 10%;
     margin-right: 10%;
+    border: none;
 }
 
-.search-button{
-    margin: auto;
-}
 .btn{
     margin: 1.2rem;
 }
@@ -49,7 +47,7 @@ body {
         margin-right: 5%;
     }
     .search-button{
-        margin-left: 3rem;
+        margin-left: 5rem;
     }
  }
 
@@ -60,7 +58,7 @@ body {
         margin-right: 5% ;
     }
     .search-button{
-        margin-left: 8rem;
+        margin-left: 12rem;
     }
 
  }
@@ -72,7 +70,7 @@ body {
         margin-right: 10% ;
     } 
     .search-button{
-        margin-left: 12rem;
+        margin-left: 14rem;
     }
 
  }
@@ -84,7 +82,7 @@ body {
         margin-right: 20% ;
     } 
     .search-button{
-        margin-left: 15rem;
+        margin-left: 12rem;
     }
 
  }

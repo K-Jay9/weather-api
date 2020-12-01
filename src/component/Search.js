@@ -3,7 +3,7 @@ import React from 'react'
 function Search() {
     return (
         <div className='container'>
-            <div className="card border-primary mb-3 search">
+            <div className="card mb-3 search">
                 <div className="card-body text-primary">
                     <h5 className="card-title text-center"> Weather App</h5>
 

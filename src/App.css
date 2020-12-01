@@ -28,9 +28,11 @@ body {
     margin-right: 10%;
     border: none;
 }
-
+.form-control{
+    border-radius: 0;
+}
 .btn{
-    margin: 1.2rem;
+    border-radius: 0;
 }
 .card-title{
     letter-spacing: 5px;
@@ -70,10 +72,15 @@ span{
 @media (min-width: 768px) { 
     .search{
         margin-left: 5% ;
+        margin-top: 10%;
         margin-right: 5% ;
     }
     .search-button{
         margin-left: 12rem;
+    }
+    .result{
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 
  }
@@ -81,11 +88,17 @@ span{
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     .search{
+        margin-top: 10%;
         margin-left: 10% ;
         margin-right: 10% ;
     } 
     .search-button{
         margin-left: 14rem;
+    }
+    .result{
+        margin-left: 5rem;
+        margin-left: 5rem;
+
     }
 
  }
@@ -95,9 +108,14 @@ span{
     .search{
         margin-left: 20% ;
         margin-right: 20% ;
+        margin-top: 10%;
     } 
     .search-button{
         margin-left: 12rem;
+    }
+    .result{
+        margin-left: 5rem;
+        margin-left: 5rem;
     }
 
  }

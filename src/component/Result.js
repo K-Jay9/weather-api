@@ -58,7 +58,7 @@ class Result extends Component {
                             Location: {locate.name}, {locate.country} </span>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">
-                            {items.weather_descriptions[0]}
+                            Description : {items.weather_descriptions[0]}
                         </li>
                         <li className="list-group-item">
                             Temperature : {items.temperature} &#8451;
@@ -76,7 +76,7 @@ class Result extends Component {
                             Visibility : {items.visibility} M
                         </li>
                         <li className="list-group-item">
-                            Wind Degree : {items.wind_degree} &#9702;
+                            Wind Degree : {items.wind_degree} <sup>&#9702; </sup> 
                         </li>
                         <li className="list-group-item">
                             Wind Direction : {items.wind_dir}

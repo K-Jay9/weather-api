@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Search extends Component {
-
-
-    render() {
+const Search = () => {
+ 
         return (
             <div className='container'>
                 <div className="card mb-3 search">
@@ -11,12 +9,14 @@ class Search extends Component {
                         <h5 className="card-title text-center"> Weather App</h5>
 
                         <div className='search-button'>
-                            <form action='/result' className="form-inline">
+                            <form className="form-inline">
                                 <input className="form-control" type="search" 
                                 name="location"
-                                placeholder="Enter Location" aria-label="Search"></input>
+                                placeholder="Enter Location" aria-label="Search"
+                                 ></input>
 
-                                <button className="btn btn-primary " type="submit">
+                                <button className="btn btn-primary " type="submit"
+                                >
                                 <i className="fa fa-search"></i></button>
                             </form>
                         </div>
@@ -24,7 +24,6 @@ class Search extends Component {
                 </div>
             </div>
         )
-    }
 }
 
 export default Search

@@ -1,33 +1,27 @@
 import './App.css'
-import React, { Component } from 'react'
 import Result from './component/Result'
 import Search from './component/Search'
+import model from './model'
+
+import {StoreProvider, createStore} from 'easy-peasy'
 
 
 
-class App extends Component {
+const store = createStore({model})
 
 
-  componentDidMount(){
-    const base = process.env.REACT_APP_BASE_URL
-    const key = process.env.REACT_APP_API_KEY
+function App(){
 
-
-    const url = `${base}current?access_key=${key}&query=${this.props.value}`
-    
-}
-
-
-  render() {
 
     return (
+      <StoreProvider store={store}>
         <div className="App">
-            <Search/>
-            <Result />
+              <Search/>
+              <Result />
 
-          </div>
+            </div>
+      </StoreProvider>
     )
-  }
 }
 
 export default App

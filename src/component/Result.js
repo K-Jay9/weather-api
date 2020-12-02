@@ -8,40 +8,40 @@ class Result extends Component {
         this.state = {
           error: null,
           isLoaded: false,
-          items: []
+          items: [],
+          value : this.props.value
         };
-      }
-      componentDidMount(){
-        const base = process.env.REACT_APP_BASE_URL
-        const key = process.env.REACT_APP_API_KEY
+    }
+        componentDidMount(){
+            const base = process.env.REACT_APP_BASE_URL
+            const key = process.env.REACT_APP_API_KEY
 
-        const url = `${base}current?access_key=${key}&query=${this.props.value}`
+            const url = `${base}current?access_key=${key}&query=${this.state.value[0]}`
         
-        
-        fetch(url)
-            .then(res => res.json())
-            .then((result) => {
-                this.setState({
-                  isLoaded: true,
-                  items: result.current,
-                  locate: result.location
-                });
-              },
-              // Note: it's important to handle errors here
-              // instead of a catch() block so that we don't swallow
-              // exceptions from actual bugs in components.
-              (error) => {
-                this.setState({
-                  isLoaded: true,
-                  error
-                });
-              }
-            )
+            fetch(url)
+                .then(res => res.json())
+                .then((result) => {
+                    this.setState({
+                      isLoaded: true,
+                      items: result.current,
+                      locate: result.location,
+                    }); 
+                  },
+                  // Note: it's important to handle errors here
+                  // instead of a catch() block so that we don't swallow
+                  // exceptions from actual bugs in components.
+                  (error) => {
+                    this.setState({
+                      isLoaded: true,
+                      error
+                    });
+                  }
+                  )
+
         }
+        
         render() {
             const { error, isLoaded, items, locate } = this.state;
-
-
           
             if (error) {
             return <div>Error: {error.message}</div>;

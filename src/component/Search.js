@@ -5,17 +5,23 @@ import Result from './Result'
  class Search extends Component {
 
     state = {
-        value : 'New York',
+        value : [],
+        ischanged : false
     }
 
     onChange = (e) => {
         this.setState({
-            value : e.target.value
+            val : this.state.value.unshift(e.target.value),
+            ischanged : false
         })
     }
     onSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        this.setState({
+            ischanged : true
+        })
     }
+
     render() {
         return (
             <Fragment>
@@ -41,7 +47,8 @@ import Result from './Result'
                         </div>
                     </div>
                 </div>
-            <Result value={this.state.value}/>
+                {this.state.ischanged && <Result value={this.state.value}/>}
+            
         </Fragment>
         )
     }
